@@ -1,6 +1,7 @@
 export interface Warrior {
     fight(): string;
     sneak(): string;
+    greet(): string;
 }
 
 export interface Weapon {

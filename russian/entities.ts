@@ -31,9 +31,11 @@ class Bogatyr implements Warrior {
         this._gantlet = gantlet;
     }
 
-    public fight() { return this._mace.hit(); }
-    public sneak() { return this._gantlet.throw(); }
-
+    public fight() { return this.greet() + this._mace.hit(); }
+    public sneak() { return this.greet() + this._gantlet.throw(); }
+    public greet(): string {
+        return 'Я Русский Богатырь! ';
+    }
 }
 
 export { Bogatyr, Mace, Gantlet };

@@ -31,8 +31,11 @@ class Legioner implements Warrior {
         this._dart = dart;
     }
 
-    public fight() { return this._sword.hit(); }
-    public sneak() { return this._dart.throw(); }
+    public fight() { return this.greet() + this._sword.hit(); }
+    public sneak() { return this.greet() + this._dart.throw(); }
+    public greet(): string {
+        return 'Ego sum legionnaire! ';
+    }
 
 }
 

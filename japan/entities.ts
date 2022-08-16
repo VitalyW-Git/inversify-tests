@@ -31,8 +31,11 @@ class Ninja implements Warrior {
         this._shuriken = shuriken;
     }
 
-    public fight() { return this._katana.hit(); }
-    public sneak() { return this._shuriken.throw(); }
+    public fight() { return this.greet() + this._katana.hit(); }
+    public sneak() { return this.greet() + this._shuriken.throw(); }
+    public greet(): string {
+        return 'I am a ninja! ';
+    }
 
 }
 

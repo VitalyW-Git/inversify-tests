@@ -45,8 +45,11 @@ var Bogatyr = /** @class */ (function () {
         this._mace = mace;
         this._gantlet = gantlet;
     }
-    Bogatyr.prototype.fight = function () { return this._mace.hit(); };
-    Bogatyr.prototype.sneak = function () { return this._gantlet.throw(); };
+    Bogatyr.prototype.fight = function () { return this.greet() + this._mace.hit(); };
+    Bogatyr.prototype.sneak = function () { return this.greet() + this._gantlet.throw(); };
+    Bogatyr.prototype.greet = function () {
+        return 'Я Русский Богатырь! ';
+    };
     Bogatyr = __decorate([
         (0, inversify_1.injectable)(),
         __param(0, (0, inversify_1.inject)(types_1.TYPES.Weapon)),

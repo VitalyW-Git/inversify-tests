@@ -45,8 +45,11 @@ var Legioner = /** @class */ (function () {
         this._sword = sword;
         this._dart = dart;
     }
-    Legioner.prototype.fight = function () { return this._sword.hit(); };
-    Legioner.prototype.sneak = function () { return this._dart.throw(); };
+    Legioner.prototype.fight = function () { return this.greet() + this._sword.hit(); };
+    Legioner.prototype.sneak = function () { return this.greet() + this._dart.throw(); };
+    Legioner.prototype.greet = function () {
+        return 'Ego sum legionnaire! ';
+    };
     Legioner = __decorate([
         (0, inversify_1.injectable)(),
         __param(0, (0, inversify_1.inject)(types_1.TYPES.Weapon)),
